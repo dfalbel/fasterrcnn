@@ -22,7 +22,7 @@ fasterrcnn <- function(n_classes = 21, num_rois = 32,
 
       shared <- self$vgg(img)
 
-      out_rpn <- self$rpn(shared_layers)
+      out_rpn <- self$rpn(shared)
       out_cls <- self$cls(list(shared, roi))
 
       append(out_rpn, out_cls)
